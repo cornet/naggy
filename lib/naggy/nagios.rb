@@ -1,5 +1,5 @@
 module Naggy
-  class Client
+  class Nagios
     attr_reader :state
     attr_reader :clients
 
@@ -8,7 +8,7 @@ module Naggy
       @clients = []
 
       args[:hosts].each do |k,v|
-        @clients << Nagios::API::Client.new(v)
+        @clients << ::Nagios::API::Client.new(v)
       end
 
       refresh_state!

@@ -1,5 +1,5 @@
 require 'nagios'
-require 'naggy/client'
+require 'naggy/nagios'
 require 'naggy/version'
 require 'naggy/host'
 require 'naggy/hosts'
