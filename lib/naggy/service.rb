@@ -27,5 +27,9 @@ module Naggy
     def acked?
       @state['problem_has_been_acknowledged'] == YES
     end
+
+    def output
+      @state['plugin_output']
+    end
   end
 end
