@@ -22,6 +22,10 @@ module Naggy
       end
     end
 
+    def oks
+      services.select {|service| service.ok?}
+    end
+
     def problems
       services.select {|service| !service.ok?}
     end
