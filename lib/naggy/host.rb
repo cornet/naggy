@@ -37,5 +37,13 @@ module Naggy
     def unknowns
       services.select {|service| service.unknown?}
     end
+
+    def duration
+      Time.now - Time.at(@state['last_state_change'].to_i)
+    end
+
+    def human_duration
+      ChronicDuration.output duration.to_i, :format => :short
+    end
   end
 end

@@ -1,4 +1,5 @@
 require 'nagios'
+require 'chronic_duration'
 require 'naggy/nagios'
 require 'naggy/version'
 require 'naggy/host'
