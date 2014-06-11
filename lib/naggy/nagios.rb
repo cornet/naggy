@@ -24,7 +24,7 @@ module Naggy
     end
 
     def hosts
-      @hosts = Naggy::Hosts.new(:api_client => self)
+      @hosts ||= Naggy::Hosts.new(:api_client => self)
     end
   end
 end
