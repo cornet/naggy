@@ -16,7 +16,11 @@ module Naggy
     
     def refresh_state!
       @state.clear
-      @clients.each {|client| @state.merge! client.state.data}
+
+      @clients.each do |client|
+        client.state.reload
+        @state.merge! client.state.data
+      end
     end
 
     def hosts
